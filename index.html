@@ -8,8 +8,8 @@
       const error = params.get("error");
 
       const redirectUrl = error
-        ? `com.example.oauth://auth?error=${encodeURIComponent(error)}`
-        : `com.example.oauth://auth?code=${encodeURIComponent(code)}`;
+        ? `m.example.oauth://auth?error=${encodeURIComponent(error)}`
+        : `m.example.oauth://auth?code=${encodeURIComponent(code)}`;
 
       window.location.href = redirectUrl;
     </script>
