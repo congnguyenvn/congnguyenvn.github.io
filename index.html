@@ -9,8 +9,8 @@
 
       alert('code=' + code + ' error=' + error);
       const redirectUrl = error
-        ? `com.duendesoftware.demo://oauthredirect?error=${encodeURIComponent(error)}`
-        : `com.duendesoftware.demo://oauthredirect?code=${encodeURIComponent(code)}`;
+        ? `com.duendesoftware.demo:/oauthredirect?error=${encodeURIComponent(error)}`
+        : `com.duendesoftware.demo:/oauthredirect?code=${encodeURIComponent(code)}`;
 
       window.location.href = redirectUrl;
     </script>
