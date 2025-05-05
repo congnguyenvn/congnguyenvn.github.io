@@ -7,7 +7,7 @@
       const code = params.get("code");
       const error = params.get("error");
 
-      alert(code)
+      alert('code=' + code + ' error=' + error);
       const redirectUrl = error
         ? `com.duendesoftware.demo:/oauthredirect?error=${encodeURIComponent(error)}`
         : `com.duendesoftware.demo:/oauthredirect?code=${encodeURIComponent(code)}`;
