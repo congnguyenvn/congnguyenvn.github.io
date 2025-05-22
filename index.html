@@ -9,8 +9,8 @@
 
       alert('code=' + code + ' error=' + error);
       const redirectUrl = error
-        ? `com.example.oauth://auth?error=${encodeURIComponent(error)}`
-        : `com.example.oauth://auth?code=${encodeURIComponent(code)}`;
+        ? `com.example.oauth:/auth?error=${encodeURIComponent(error)}`
+        : `com.example.oauth:/auth?code=${encodeURIComponent(code)}`;
 
       window.location.href = redirectUrl;
     </script>
