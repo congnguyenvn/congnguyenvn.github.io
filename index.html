@@ -7,11 +7,13 @@
       const code = params.get("code");
       const error = params.get("error");
 
+      // Change this to your app's custom scheme
       const redirectUrl = error
         ? `com.example.oauth://auth?error=${encodeURIComponent(error)}`
         : `com.example.oauth://auth?code=${encodeURIComponent(code)}`;
 
       window.location.href = redirectUrl;
     </script>
+    <p>Redirecting...</p>
   </body>
 </html>
