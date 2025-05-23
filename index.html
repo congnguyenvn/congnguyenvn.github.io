@@ -5,15 +5,17 @@
     <script>
       const params = new URLSearchParams(window.location.search);
       const code = params.get("code");
-      const error = params.get("error");
-
-      // Change this to your app's custom scheme
-      const redirectUrl = error
-        ? `com.example.oauth://auth?error=${encodeURIComponent(error)}`
-        : `com.example.oauth://auth?code=${encodeURIComponent(code)}`;
-
-      window.location.href = redirectUrl;
+      if (code) {
+        document.write(`<a id="openApp" href="com.example.oauth://auth?code=${encodeURIComponent(code)}">Tap here to continue</a>`);
+        document.getElementById('openApp').click();
+      }
     </script>
-    <p>Redirecting...</p>
+    <p>If nothing happens, <a id="manualLink" href="#">tap here</a>.</p>
+    <script>
+      // Fallback for manual tap
+      const params2 = new URLSearchParams(window.location.search);
+      const code2 = params2.get("code");
+      document.getElementById('manualLink').href = `com.example.oauth://auth?code=${encodeURIComponent(code2)}`;
+    </script>
   </body>
 </html>
